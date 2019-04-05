@@ -1,3 +1,8 @@
+$color-primary: #55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-black-grey: #000
 *,
 *::after,
 *::before {
@@ -13,13 +18,13 @@ body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  color: #777;
+  color:$color-grey-dark;
   padding: 30px;
   box-sizing: border-box; }
 
 .header {
   height: 50vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url(../image/bg.jpg);
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)), url(../image/bg.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 200px, 0 100%);
@@ -67,11 +72,11 @@ a {
 
 .btn:hover {
   transform: translateY(-3rem);
-  box-shadow: 0, 1rem, 2rem, rgba(0, 0, 0, 0.2); }
+  box-shadow: 0, 1rem, 2rem, rgba($color-black-grey, 0.2); }
 
 .btn:active {
   transform: translateY(-1rem);
-  box-shadow: 0, 0.5rem, 2rem, rgba(0, 0, 0, 0.2); }
+  box-shadow: 0, 0.5rem, 2rem, rgba($color-black-grey, 0.2); }
 
 @keyframes moveIndown {
   0% {
@@ -89,7 +94,7 @@ a {
   height: 50rem; }
 
 .sidebar {
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8));
+  background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8));
   width: 30rem;
   text-align: center;
   line-height: 2rem;
@@ -105,7 +110,7 @@ a {
 .portfolio {
   height: 5rem;
   border-bottom: solid 1px #fff;
-  color: #777;
+  color: $color-grey-dark;
   display: block;
   font-size: 2rem;
   font-weight: 400;
@@ -140,7 +145,7 @@ p {
 
 .footer {
   display: inline-block;
-  background-color: rgba(85, 197, 122, 0.8);
+  background-color: rgba($color-primary-dark, 0.8);
   width: 100%;
   height: auto;
   text-align: center;
